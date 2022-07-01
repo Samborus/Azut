@@ -1,0 +1,29 @@
+{
+    "level": "info",
+    "message": "GET /api/test | 200",
+    "timestamp": "2021-12-08T14:50:05.004Z",
+    "transaction": {
+      "proxied": false,
+      "request": {
+        "body": "",
+        "headers": [
+          { "key": "accept", "value": "application/json, text/plain, */*" }
+        ],
+        "method": "GET",
+        "params": [],
+        "queryParams": [],
+        "route": "/api/test",
+        "urlPath": "/api/test"
+      },
+      "response": {
+        "body": "response",
+        "headers": [
+          { "key": "content-length", "value": "8" },
+          { "key": "content-type", "value": "application/json; charset=utf-8" }
+        ],
+        "statusCode": 200
+      },
+      "routeResponseUUID": "b1ba948f-82b3-4cc2-8067-692e562319ab",
+      "routeUUID": "304a761f-351d-415a-bf59-6e927322ae63"
+    }
+  }
