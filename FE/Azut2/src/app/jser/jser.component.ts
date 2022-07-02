@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { WeatherService } from '../service/weather.service';
+import { Observable  } from 'rxjs';
 
 @Component({
   selector: 'app-jser',
@@ -7,11 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class JserComponent implements OnInit {
 
-  constructor() { }
+  constructor(private weatherService: WeatherService) { }
 
   ngOnInit(): void {
     this.scripting();
+    this.weatherService.getWeather().pipe(
+      //tap(console.log)
+    ).subscribe();
   }
+
   p1: string = "";
 
   private scripting() {
