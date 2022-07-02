@@ -1,0 +1,5 @@
+DELETE https://localhost:7127/api/WeatherForecast/3 HTTP/1.1
+content-type: application/json
+
+GET https://localhost:7127/api/WeatherForecast HTTP/1.1
+content-type: application/json
