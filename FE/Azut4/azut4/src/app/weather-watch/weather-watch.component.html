@@ -1,0 +1,19 @@
+<clr-datagrid>
+    <clr-dg-column>weat ID</clr-dg-column>
+    <clr-dg-column>temperatureC</clr-dg-column>
+    <clr-dg-column>temperatureF</clr-dg-column>
+    <clr-dg-column>summary</clr-dg-column>
+    <clr-dg-column>date</clr-dg-column>
+
+    <clr-dg-row *ngFor="let weat of weats">
+        <clr-dg-cell>{{weat.id}}</clr-dg-cell>
+        <clr-dg-cell>{{weat.temperatureC}}</clr-dg-cell>
+        <clr-dg-cell>{{weat.temperatureF}}</clr-dg-cell>
+        <clr-dg-cell>{{weat.summary}}</clr-dg-cell>
+        <clr-dg-cell>{{weat.date}}</clr-dg-cell>
+    </clr-dg-row>
+
+    <clr-dg-footer> weats</clr-dg-footer>
+</clr-datagrid>
+
+
