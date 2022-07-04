@@ -34,7 +34,8 @@
           </section>
       </nav>
       <div class="content-area">
-        <app-weather-list [weats]="weats$ | async"> </app-weather-list>
+        <!-- <app-weather-list [weats]="weats$ | async" (remove)="onRemove($event)" (add)="onAdd($event)"> </app-weather-list> -->
+        <app-words-list [words]="words$ | async" (remove)="onRemove($event)" (add)="onAdd($event)"></app-words-list> 
       </div>
   </div>
 </div>

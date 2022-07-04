@@ -1,12 +1,16 @@
 <clr-datagrid>
+    
     <clr-dg-column>weat ID</clr-dg-column>
     <clr-dg-column>temperatureC</clr-dg-column>
     <clr-dg-column>temperatureF</clr-dg-column>
     <clr-dg-column>summary</clr-dg-column>
     <clr-dg-column>date</clr-dg-column>
-    <clr-dg-column>red</clr-dg-column>
+    <clr-dg-column>level</clr-dg-column>
 
     <clr-dg-row *ngFor="let weat of weats">
+        <clr-dg-action-overflow>
+            <button class="action-item" (click)="onDelete(weat?.id)" >Delete</button>
+        </clr-dg-action-overflow>
         <clr-dg-cell>{{weat.id}}</clr-dg-cell>
         <clr-dg-cell>{{weat.temperatureC}}</clr-dg-cell>
         <clr-dg-cell>{{weat.temperatureF}}</clr-dg-cell>
@@ -19,7 +23,9 @@
 
     <clr-dg-footer> count: {{weats?.length }}</clr-dg-footer>
 </clr-datagrid>
-
+<br/>
+<br/>
+<button class="btn btn-success-outline" (click)="onAdd()">Add</button>
 <style>
     .color-square {
  display:inline-block;
@@ -28,36 +34,5 @@
  width:.7rem;
  border:.05rem solid #000;
  border-radius:.2rem
-}
-.color-filter[_ngcontent-dxc-c230] {
- display:block;
- width:5rem
-}
-.color-selectable[_ngcontent-dxc-c230] {
- cursor:pointer;
- margin:.1rem;
- opacity:.2
-}
-.color-selectable.color-selected[_ngcontent-dxc-c230],
-.color-selectable[_ngcontent-dxc-c230]:hover {
- opacity:1
-}
-.lorem-ipsum[_ngcontent-dxc-c230] {
- max-width:15rem
-}
-.username-list[_ngcontent-dxc-c230] {
- margin-bottom:0
-}
-.username-list[_ngcontent-dxc-c230]   .username[_ngcontent-dxc-c230]:not(:last-child):after {
- content:", "
-}
-.username-list[_ngcontent-dxc-c230]   .username[_ngcontent-dxc-c230]:last-child:after {
- content:"."
-}
-h2[_ngcontent-dxc-c230]:first-child {
- margin-top:1.2rem
-}
-.limit-height[_ngcontent-dxc-c230]   clr-datagrid[_ngcontent-dxc-c230] {
- height:14.4rem
 }
 </style>

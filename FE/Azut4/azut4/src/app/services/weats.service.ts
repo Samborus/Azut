@@ -12,9 +12,6 @@ export class WeatsService {
   getWeats(): Observable<Array<Weat>> {
     return this.http
       .get<Weat[]>('https://localhost:7127/api/WeatherForecast')
-      .pipe(
-        //map(w => w.items || []),
-        tap(console.log)
-        );
+      .pipe();
   }
 }
