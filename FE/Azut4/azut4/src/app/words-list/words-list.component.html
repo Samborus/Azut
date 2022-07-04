@@ -1,0 +1,34 @@
+<clr-datagrid>
+    
+    <clr-dg-column>word ID</clr-dg-column>
+    <clr-dg-column>temperatureC</clr-dg-column>
+    <clr-dg-column>temperatureF</clr-dg-column>    
+
+    <clr-dg-row *ngFor="let word of words">
+        <clr-dg-action-overflow>
+            <button class="action-item" (click)="onDelete(word?.id)" >Delete</button>
+        </clr-dg-action-overflow>
+        <clr-dg-cell>{{word.id}}</clr-dg-cell>
+        <clr-dg-cell>{{word.name}}</clr-dg-cell>
+        <clr-dg-cell>{{word.meaning}}</clr-dg-cell>
+
+        <clr-dg-cell>
+            <span class="color-square" [style.backgroundColor]="'red'"></span>
+        </clr-dg-cell>
+    </clr-dg-row>
+
+    <clr-dg-footer> count: {{words?.length }}</clr-dg-footer>
+</clr-datagrid>
+<br/>
+<br/>
+<button class="btn btn-success-outline" (click)="onAdd()">Add</button>
+<style>
+    .color-square {
+ display:inline-block;
+ vertical-align:text-bottom;
+ height:.7rem;
+ width:.7rem;
+ border:.05rem solid #000;
+ border-radius:.2rem
+}
+</style>
