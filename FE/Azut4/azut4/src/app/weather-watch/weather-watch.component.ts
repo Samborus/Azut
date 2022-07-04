@@ -10,14 +10,16 @@ import { Weat } from '../models/weat';
 })
 export class WeatherWatchComponent implements OnInit {
 
+
   constructor(private weatherServiceService: WeatherServiceService) { }
 
   weats: Weat[] = [];
 
   ngOnInit(): void {
-    this.weatherServiceService.getWeather().pipe(
-      tap(console.log)
-    ).subscribe(ws => this.weats = ws);
+    //  this.weatherServiceService.getWeather().pipe(
+    //    tap(console.log)
+    //  ).subscribe(ws => this.weats = ws);
+
   }
 
 }
