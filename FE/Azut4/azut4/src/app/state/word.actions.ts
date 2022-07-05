@@ -8,7 +8,7 @@ export const addWord = createAction(
  
 export const removeWord = createAction(
   '[word Collection] Remove word',
-  props<{ wordId: number }>()
+  props<{ wordHash: string }>()
 );
  
 export const retrievedWrdList = createAction(
