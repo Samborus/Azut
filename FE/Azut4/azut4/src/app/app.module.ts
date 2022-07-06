@@ -8,16 +8,16 @@ import { AppComponent } from './app.component';
 import { ClarityModule } from "@clr/angular";
 import { WordsReducer } from './state/words.reducer';
 import { StoreModule } from '@ngrx/store';
-import { WeatsService } from './services/weats.service';
+
 import { WordsListComponent } from './words-list/words-list.component';
 import { WordsCardsComponent } from './words-cards/words-cards.component';
-import { WordEditorComponent } from './word-editor/word-editor.component';
+import { WordsModule } from './words/words.module';
+
 @NgModule({
   declarations: [
     AppComponent,
     WordsListComponent,
-    WordsCardsComponent,
-    WordEditorComponent
+    WordsCardsComponent    
   ],
   imports: [
     BrowserModule,
@@ -25,7 +25,8 @@ import { WordEditorComponent } from './word-editor/word-editor.component';
     AppRoutingModule,
     StoreModule.forRoot({ words: WordsReducer }),
     HttpClientModule,
-    ClarityModule
+    ClarityModule,
+    WordsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
