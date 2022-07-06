@@ -9,15 +9,11 @@ import { ClarityModule } from "@clr/angular";
 import { WordsReducer } from './state/words.reducer';
 import { StoreModule } from '@ngrx/store';
 
-import { WordsListComponent } from './words-list/words-list.component';
-import { WordsCardsComponent } from './words-cards/words-cards.component';
 import { WordsModule } from './words/words.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    WordsListComponent,
-    WordsCardsComponent    
+    AppComponent,        
   ],
   imports: [
     BrowserModule,
