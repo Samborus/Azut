@@ -6,9 +6,13 @@ export class Word {
     meaning: string = '';
     hash: string = '';
 
-    constructor(name: string, meaning: string) {
+    constructor(name: string, meaning: string, hash: string | null = null) {
         this.name = name;
         this.meaning = meaning;
-        this.hash = Md5.hashStr(name);
+        if (hash) {
+            this.hash = hash;
+        } else {
+            this.hash = Md5.hashStr(name);
+        }
     }
 }

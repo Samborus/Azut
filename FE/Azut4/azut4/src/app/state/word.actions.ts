@@ -5,6 +5,11 @@ export const addWord = createAction(
   '[word List] Add word',
   props<{ word: Word }>()
 );
+
+export const updateWord = createAction(
+  '[word List] Update word',
+  props<{ word: Word }>()
+);
  
 export const removeWord = createAction(
   '[word Collection] Remove word',
