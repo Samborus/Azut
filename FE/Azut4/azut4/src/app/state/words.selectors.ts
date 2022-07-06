@@ -1,5 +1,5 @@
 import { createSelector, createFeatureSelector } from '@ngrx/store';
-import { Word } from '../models/word';
+import { Word } from '../words/models/word';
  
 export const selectWords = createFeatureSelector<ReadonlyArray<Word>>('words');
  

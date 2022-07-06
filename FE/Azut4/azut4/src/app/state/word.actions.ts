@@ -1,5 +1,5 @@
 import { createAction, props } from '@ngrx/store';
-import { Word } from '../models/word';
+import { Word } from '../words/models/word';
  
 export const addWord = createAction(
   '[word List] Add word',

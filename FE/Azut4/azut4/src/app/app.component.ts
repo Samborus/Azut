@@ -3,7 +3,7 @@ import { Store } from '@ngrx/store';
 import { WeatsService } from './services/weats.service';
 import { Observable, tap, map } from 'rxjs';
 import { retrievedWrdList, addWord, removeWord } from './state/word.actions';
-import { Word } from './models/word';
+import { Word } from './words/models/word';
 import { selectWords } from './state/words.selectors';
 
 @Component({

@@ -1,7 +1,7 @@
 import { createReducer, on } from '@ngrx/store';
 
 import { retrievedWrdList, removeWord, addWord, updateWord } from './word.actions';
-import { Word } from '../models/word';
+import { Word } from '../words/models/word';
 
 export const initialState: ReadonlyArray<Word> = [];
 
