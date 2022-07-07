@@ -31,6 +31,10 @@ export class WordEditorComponent implements OnInit {
     this.store.dispatch(updateWord({ word }));
   }
 
+  newWord() {
+    this.hash = this.meaning = this.name = '';
+  }
+
   ngOnInit(): void {
     fromEvent(document, 'click')
     .pipe(scan((count) => count + 1, 0))

@@ -5,6 +5,7 @@
 <button *ngIf="hash == '';  else elseBlock" class="btn btn-success-outline" (click)="onAdd()">Add</button>
 <ng-template #elseBlock>
     <button class="btn btn-success-outline" (click)="onUpdate()">Update</button>
+    <button class="btn btn-success-outline" (click)="newWord()">New</button>
 </ng-template>
 <br/>
 
