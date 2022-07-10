@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, Input, ViewChild, ElementRef } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { retrievedWrdList, addWord, removeWord, updateWord } from '../../state/word.actions';
 import { Word } from '../models/word';
@@ -11,6 +11,7 @@ import { fromEvent, scan } from 'rxjs';
 })
 export class WordEditorComponent implements OnInit {
   @Output() add: EventEmitter<Word> = new EventEmitter<Word>();
+  @Input() edit: Word = new Word('','');
 
   name: string = '';
   meaning: string = '';
@@ -35,10 +36,14 @@ export class WordEditorComponent implements OnInit {
     this.hash = this.meaning = this.name = '';
   }
 
+  selectedWord(word: Word)
+  {
+    this.hash = word.hash;
+    this.name = word.name;
+    this.meaning = word.meaning;
+  }
+
   ngOnInit(): void {
-    fromEvent(document, 'click')
-    .pipe(scan((count) => count + 1, 0))
-    .subscribe((count) => console.log(`Clicked ${count} times`));
   }
 
 }

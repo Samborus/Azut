@@ -10,6 +10,7 @@ import { WordsReducer } from './state/words.reducer';
 import { StoreModule } from '@ngrx/store';
 
 import { WordsModule } from './words/words.module';
+import { LocalService } from './services/local.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { WordsModule } from './words/words.module';
     ClarityModule,
     WordsModule
   ],
-  providers: [],
+  providers: [LocalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
