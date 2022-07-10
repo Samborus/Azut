@@ -3,9 +3,11 @@
     <clr-dg-column>hash</clr-dg-column>
     <clr-dg-column>name</clr-dg-column>
     <clr-dg-column>meaning</clr-dg-column>    
+    <clr-dg-column>level</clr-dg-column> 
 
-    <clr-dg-row *ngFor="let word of words">
+    <clr-dg-row *ngFor="let word of words; trackBy: trackById" [clrDgItem]="word">
         <clr-dg-action-overflow>
+            <button class="action-item" (click)="onEdit(word)" >Edit</button>
             <button class="action-item" (click)="onDelete(word.hash)" >Delete</button>
         </clr-dg-action-overflow>
         <clr-dg-cell>{{word.hash}}</clr-dg-cell>
@@ -15,6 +17,7 @@
         <clr-dg-cell>
             <span class="color-square" [style.backgroundColor]="'red'"></span>
         </clr-dg-cell>
+        
     </clr-dg-row>
 
     <clr-dg-footer> count: {{words?.length }}</clr-dg-footer>
