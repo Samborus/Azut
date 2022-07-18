@@ -5,7 +5,7 @@ import { Word } from '../words/models/word';
 
 export const initialState: ReadonlyArray<Word> = [
     new Word("intrinsic", "wrodzony", "34d1f91fb2e514b8576fab1a75a89a6b"),
-    new Word("parish", "parafia", "34d1f91fb2e514b8576fab1a75a89a6b")
+    new Word("parish", "parafia", "da1ec6c96235c82b5e413484a046ae9a")
 ];
 
 export const WordsReducer = createReducer(

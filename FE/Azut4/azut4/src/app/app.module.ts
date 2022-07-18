@@ -11,10 +11,12 @@ import { StoreModule } from '@ngrx/store';
 
 import { WordsModule } from './words/words.module';
 import { LocalService } from './services/local.service';
+import { WordContainerComponent } from './word-container/word-container.component';
 
 @NgModule({
   declarations: [
-    AppComponent,        
+    AppComponent,
+    WordContainerComponent,        
   ],
   imports: [
     BrowserModule,

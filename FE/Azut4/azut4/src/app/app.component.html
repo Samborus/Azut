@@ -33,16 +33,8 @@
               </section>
           </section>
       </nav>
-      <div class="content-area">
-    <app-words-list [words]="words$ | async" (remove)="onRemove($event)" (select)="selectedWord($event)" ></app-words-list> 
-        <br />
-        <br />
-        <app-word-editor></app-word-editor>
-        <!-- <app-words-cards></app-words-cards> -->
-      </div>
   </div>
 </div>
-<div class="content" role="main">
-  
-</div>
+
+    <app-word-container></app-word-container>
 <router-outlet></router-outlet>
