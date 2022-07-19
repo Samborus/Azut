@@ -12,6 +12,8 @@ import { StoreModule } from '@ngrx/store';
 import { WordsModule } from './words/words.module';
 import { LocalService } from './services/local.service';
 import { WordContainerComponent } from './word-container/word-container.component';
+import { EffectsModule } from '@ngrx/effects';
+import { WordEffects } from './state/effects/word.effects';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { WordContainerComponent } from './word-container/word-container.componen
     StoreModule.forRoot({ words: WordsReducer }),
     HttpClientModule,
     ClarityModule,
-    WordsModule
+    WordsModule,
+    EffectsModule.forRoot([WordEffects])
   ],
   providers: [LocalService],
   bootstrap: [AppComponent]

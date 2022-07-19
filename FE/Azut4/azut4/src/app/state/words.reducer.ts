@@ -10,14 +10,14 @@ export const initialState: ReadonlyArray<Word> = [
 
 export const WordsReducer = createReducer(
   initialState,
-  on(removeWord, (state, { wordHash }) => state.filter((wid) => wid.hash !== wordHash)),
-  on(retrievedWrdList, (state, { words }) => words),
-  on(addWord, (state, { word }) => {
-    if (state.indexOf(word) > -1) return state;
+  on(removeWord, (state, { payload }) => state.filter((wid) => wid.hash !== payload)),
+  on(retrievedWrdList, (state, { payload }) => payload),
+  on(addWord, (state, { payload }) => {
+    if (state.indexOf(payload) > -1) return state;
  
-    return [...state, word];
+    return [...state, payload];
   }),
-  on(updateWord, (state, { word }) => {
-    return [...state.filter((wid) => wid.hash !== word.hash), word];
+  on(updateWord, (state, { payload }) => {
+    return [...state.filter((wid) => wid.hash !== payload.hash), payload];
   })
 );

@@ -16,9 +16,9 @@ export class WordContainerComponent implements OnInit {
   title = 'azut4';
   words$ = this.store.select(selectWords);
  
-  onRemove(wordHash: string) {
-    console.log(wordHash);
-    this.store.dispatch(removeWord({ wordHash }));
+  onRemove(payload: string) {
+    console.log(payload);
+    this.store.dispatch(removeWord({ payload }));
   }
 
   selectedWord(word: Word): void {
