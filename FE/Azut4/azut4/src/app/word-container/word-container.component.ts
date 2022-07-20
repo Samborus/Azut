@@ -13,7 +13,7 @@ import { pipe } from 'rxjs';
 })
 export class WordContainerComponent implements OnInit {
   @ViewChild(WordEditorComponent) editor!: WordEditorComponent;
-  title = 'azut4';
+  title = 'Azut';
   words$ = this.store.select(selectWords);
  
   onRemove(payload: string) {

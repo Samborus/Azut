@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { WordsListComponent } from './words-list/words-list.component';
 import { ClarityModule } from "@clr/angular";
 import { WordsCardsComponent } from './words-cards/words-cards.component';
+import { DbService } from './services/db.service';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,9 @@ import { WordsCardsComponent } from './words-cards/words-cards.component';
     WordEditorComponent,
     WordsListComponent,
     WordsCardsComponent
+  ],
+  providers: [
+    DbService
   ]
 })
 export class WordsModule { }
