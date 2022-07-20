@@ -3,20 +3,20 @@ import { Word } from '../words/models/word';
  
 export const addWord = createAction(
   '[word List] Add word',
-  props<{ word: Word }>()
+  props<{ payload: Word }>()
 );
 
 export const updateWord = createAction(
   '[word List] Update word',
-  props<{ word: Word }>()
+  props<{ payload: Word }>()
 );
  
 export const removeWord = createAction(
   '[word Collection] Remove word',
-  props<{ wordHash: string }>()
+  props<{ payload: string }>()
 );
  
 export const retrievedWrdList = createAction(
   '[word List/API] Retrieve words Success',
-  props<{ words: ReadonlyArray<Word> }>()
+  props<{ payload: ReadonlyArray<Word> }>()
 );

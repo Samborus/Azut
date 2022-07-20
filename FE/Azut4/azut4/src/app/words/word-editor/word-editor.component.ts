@@ -21,15 +21,15 @@ export class WordEditorComponent implements OnInit {
               }
 
   onAdd(): void {
-    const word = new Word(this.name,this.meaning);
-    this.hash = word.hash;
-    this.store.dispatch(addWord({word}));
+    const payload = new Word(this.name,this.meaning);
+    this.hash = payload.hash;
+    this.store.dispatch(addWord({payload}));
   }
 
   onUpdate() {
     console.log("onUpdate")
-    const word = new Word(this.name, this.meaning, this.hash);
-    this.store.dispatch(updateWord({ word }));
+    const payload = new Word(this.name, this.meaning, this.hash);
+    this.store.dispatch(updateWord({ payload }));
   }
 
   newWord() {
