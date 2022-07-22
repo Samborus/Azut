@@ -11,9 +11,9 @@ export class DbService {
 
   constructor(private http: HttpClient) { }
 
-  getWeats(): Observable<Array<Word>> {
+  getWords(): Observable<Array<Word>> {
     return this.http
-      .get<Word[]>('https://localhost:7127/api/WeatherForecast')
+      .get<Word[]>('https://localhost:7127/api/Words')
       .pipe();
   }
 

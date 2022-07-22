@@ -1,5 +1,3 @@
-export * from './lib/azut-word.service';
-export * from './lib/azut-word.component';
 export * from './lib/azut-word.module';
 export * from './lib/models/word';
 export * from './lib/words-list/words-list.component';

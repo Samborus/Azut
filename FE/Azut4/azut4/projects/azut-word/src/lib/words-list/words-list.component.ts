@@ -17,7 +17,7 @@ export class WordsListComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    of(this.selectedWord).pipe(tap(console.log)).subscribe();
+    // of(this.selectedWord).pipe(tap(console.log)).subscribe();
   }
 
   onAdd(): void {
