@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { WordsListComponent } from './words/words-list/words-list.component';
+import { WordsListComponent } from 'projects/azut-word/src/public-api';
+
 
 const routes: Routes = [
   { path: 'words', component: WordsListComponent }
