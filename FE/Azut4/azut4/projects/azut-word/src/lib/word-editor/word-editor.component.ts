@@ -1,8 +1,8 @@
 import { Component, OnInit, EventEmitter, Output, Input, ViewChild, ElementRef } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { retrievedWrdList, addWord, removeWord, updateWord } from '../../state/word.actions';
 import { Word } from '../models/word';
 import { fromEvent, scan } from 'rxjs';
+import { addWord, updateWord } from '../word.actions';
 
 @Component({
   selector: 'app-word-editor',

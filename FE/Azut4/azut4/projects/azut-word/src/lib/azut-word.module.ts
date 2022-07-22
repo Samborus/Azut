@@ -1,14 +1,18 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { WordEditorComponent } from './word-editor/word-editor.component';
+import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { WordsListComponent } from './words-list/words-list.component';
-import { ClarityModule } from "@clr/angular";
-import { WordsCardsComponent } from './words-cards/words-cards.component';
+import { ClarityModule } from '@clr/angular';
+import { AzutWordComponent } from './azut-word.component';
 import { DbService } from './services/db.service';
+import { WordEditorComponent } from './word-editor/word-editor.component';
+import { WordsCardsComponent } from './words-cards/words-cards.component';
+import { WordsListComponent } from './words-list/words-list.component';
+
+
 
 @NgModule({
   declarations: [
+    AzutWordComponent,
     WordEditorComponent,
     WordsListComponent,
     WordsCardsComponent
@@ -19,6 +23,7 @@ import { DbService } from './services/db.service';
     ClarityModule
   ],
   exports: [
+    AzutWordComponent,
     WordEditorComponent,
     WordsListComponent,
     WordsCardsComponent
@@ -27,4 +32,4 @@ import { DbService } from './services/db.service';
     DbService
   ]
 })
-export class WordsModule { }
+export class AzutWordModule { }
