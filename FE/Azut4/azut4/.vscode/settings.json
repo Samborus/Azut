@@ -1,0 +1,5 @@
+{
+    "angular.log": "verbose",
+    "appService.defaultWebAppToDeploy": "/subscriptions/300d8b5d-bf81-492e-90b3-9bbdefb06db0/microsoft.web/sites/subscriptions/300d8b5d-bf81-492e-90b3-9bbdefb06db0/resourceGroups/001/providers/Microsoft.Web/sites/Web2001",
+    "appService.deploySubpath": "."
+}

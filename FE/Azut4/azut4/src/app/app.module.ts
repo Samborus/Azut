@@ -11,11 +11,16 @@ import { LocalService } from './services/local.service';
 import { WordContainerComponent } from './word-container/word-container.component';
 import { EffectsModule } from '@ngrx/effects';
 import { AzutWordModule, WordsReducer, WordEffects } from 'projects/azut-word/src/public-api';
+import { Dir1Directive } from './dir1.directive';
+import { PlayComponent } from './play/play.component';
+import { InfoComponent } from './info/info.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    WordContainerComponent,        
+    WordContainerComponent,      
+    Dir1Directive, 
+    PlayComponent, InfoComponent  
   ],
   imports: [
     BrowserModule,

@@ -5,35 +5,31 @@
   <div class="content-container">
       <nav class="sidenav">
           <section class="sidenav-content">
-              <a href="..." class="nav-link active">
+              <!-- <a href="..." class="nav-link active">
                   Monitoring
-              </a>
-              <a href="..." class="nav-link">
-                  Settings
-              </a>
-              <section class="nav-group collapsible">
+              </a> -->
+              <!-- <section class="nav-group collapsible">
                   <input id="tabexample1" type="checkbox">
                   <label for="tabexample1">Collapsible Nav Element</label>
                   <ul class="nav-list">
                       <li><a class="nav-link">Link 1</a></li>
                       <li><a class="nav-link">Link 2</a></li>
                   </ul>
-              </section>
+              </section> -->
               <section class="nav-group">
-                  <input id="tabexample2" type="checkbox">
-                  <label for="tabexample2">Default Nav Element</label>
+                  <!-- <input id="tabexample2" type="checkbox">
+                  <label for="tabexample2">Navi</label> -->
                   <ul class="nav-list">
-                      <li><a class="nav-link">Link 1</a></li>
-                      <li><a class="nav-link">Link 2</a></li>
-                      <li><a class="nav-link active">Link 3</a></li>
-                      <li><a class="nav-link">Link 4</a></li>
-                      <li><a class="nav-link">Link 5</a></li>
-                      <li><a class="nav-link">Link 6</a></li>
+                      <li><a routerLink="/words" routerLinkActive="active" class="nav-link">Words</a></li>
+                      <li><a routerLink="/play" routerLinkActive="active" class="nav-link">Play</a></li>
+                      <li><a routerLink="/info" routerLinkActive="active" class="nav-link">Info</a></li>
+                      <!-- <li><a class="nav-link active">Link 3</a></li> -->
                   </ul>
               </section>
           </section>
       </nav>
-      <app-word-container></app-word-container>
+      <!-- <app-word-container></app-word-container> -->
+      <router-outlet></router-outlet>
   </div>
 </div>
-<router-outlet></router-outlet>
+
