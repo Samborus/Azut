@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "prod-build": "ng build"
   },
   "private": true,
   "dependencies": {
@@ -23,6 +24,7 @@
     "@clr/icons": "^13.0.2",
     "@clr/ui": "^13.4.2",
     "@ngrx/effects": "^14.0.2",
+    "@ngrx/entity": "^14.0.2",
     "@ngrx/store": "^14.0.2",
     "@webcomponents/webcomponentsjs": "^2.6.0",
     "rxjs": "~7.5.0",
@@ -41,6 +43,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
+    "ng-packagr": "^14.0.0",
     "typescript": "~4.7.2"
   }
 }

@@ -43,8 +43,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "4mb",
+                  "maximumError": "5mb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -105,6 +105,38 @@
               "src/styles.sass"
             ],
             "scripts": []
+          }
+        }
+      }
+    },
+    "azut-word": {
+      "projectType": "library",
+      "root": "projects/azut-word",
+      "sourceRoot": "projects/azut-word/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/azut-word/ng-package.json"         
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/azut-word/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/azut-word/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "preserveSymlinks": true,
+            "main": "projects/azut-word/src/test.ts",
+            "tsConfig": "projects/azut-word/tsconfig.spec.json",
+            "karmaConfig": "projects/azut-word/karma.conf.js"
           }
         }
       }

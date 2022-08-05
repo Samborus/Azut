@@ -1,10 +1,10 @@
 import { Component, ViewChild, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { removeWord } from '../state/word.actions';
-import { Word } from '../words/models/word';
-import { selectWords } from '../state/words.selectors';
-import { WordEditorComponent } from '../words/word-editor/word-editor.component';
+import { Word } from '../../../projects/azut-word/src/lib/models/word';
+import { WordEditorComponent } from '../../../projects/azut-word/src/lib/word-editor/word-editor.component';
 import { pipe } from 'rxjs';
+import { selectWords } from 'projects/azut-word/src/lib/state/words.selectors';
+import { removeWord } from 'projects/azut-word/src/lib/state/word.actions';
 
 @Component({
   selector: 'app-word-container',

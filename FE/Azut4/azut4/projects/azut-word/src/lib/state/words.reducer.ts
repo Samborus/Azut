@@ -1,7 +1,8 @@
 import { createReducer, on } from '@ngrx/store';
-
+import { Word } from '../models/word';
+import { EntityState } from '../entities/entity-state'
 import { retrievedWrdList, removeWord, addWord, updateWord } from './word.actions';
-import { Word } from '../words/models/word';
+import { createEntityAdapter, EntityAdapter } from '@ngrx/entity';
 
 export const initialState: ReadonlyArray<Word> = [
     new Word("intrinsic", "wrodzony", "34d1f91fb2e514b8576fab1a75a89a6b"),
@@ -21,3 +22,10 @@ export const WordsReducer = createReducer(
     return [...state.filter((wid) => wid.hash !== payload.hash), payload];
   })
 );
+
+export interface State extends EntityState<Word> {
+  // additional entity state properties
+  selectedUserId: string | null;
+};
+
+export const adapter: EntityAdapter<Word> = createEntityAdapter<Word>();

@@ -1,0 +1,7 @@
+{
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../dist/azut-word",
+  "lib": {
+    "entryFile": "src/public-api.ts"
+  }
+}
